@@ -6,18 +6,18 @@ import java.sql.*;
 public class DBConnection {
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mssql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mssql://robocop/testDB";
+    static final String DB_URL = "jdbc:mssql://robocop/JavaDB";
 
     //  Database credentials
-    static final String USER = "sa";
-    static final String PASS = "";
+    static final String USER = "test";
+    static final String PASS = "test";
 
     public static void main(String[] args) {
         Connection conn = null;
         Statement stmt = null;
         try{
             //STEP 2: Register JDBC driver
-            Class.forName("com.mssql.jdbc.Driver");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
             //STEP 3: Open a connection
             System.out.println("Connecting to database...");
@@ -70,4 +70,4 @@ public class DBConnection {
         }//end try
         System.out.println("Goodbye!");
     }//end main
-}//end FirstExample
+}///end FirstExample
